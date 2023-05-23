@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <h3 class="app">我是组件App</h3>
-    
+  <div class="app">
+    <h3>我是组件App</h3>
   </div>
 </template>
 
 <script>
   import { reactive, readonly, ref, toRefs,isRef,isReactive,isReadonly,isProxy  } from 'vue'
-  import {defineAsyncComponent} from 'vue'
   export default {
     name: 'App',
     setup() {
@@ -21,26 +19,14 @@
       console.log(isProxy(car));
       console.log(isProxy(car2));
 
-      return {...toRefs(car)} 
+      return {...toRefs(car)}
     }
   }
 </script>
 
 <style>
-
-  div {
-    position: absolute;
-    top: 0;bottom: 0;left: 0;right: 0;
-    background-color: skyblue;
-  }
-
   .app {
     background-color: gray;
     padding: 10px;
-    width: 100px;
-
-    position: absolute;
-    top: 50%;left: 50%;
-    transform: translate(-50%,-50%);
   }
 </style>
